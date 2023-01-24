@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/node_app/app
+    command: /bin/sh -c "chmod +x entrypoint.sh && /node_app/app/entrypoint.sh"
+    env_file:
+      - .env
+    restart: always
