@@ -19,7 +19,7 @@ export class WebPushService {
         if (!config)
             throw new Error('Configuração não encontrada.')
 
-        const WEBPUSH_SUBSCRIBE_URL = `http://localhost/api/webpush-audience/${applicationId}`;
+        const WEBPUSH_SUBSCRIBE_URL = `http://146.190.115.151/api/webpush-audience/${applicationId}`;
         const WEBPUSH_SUBSCRIBE_KEY = process.env.PUBLIC_KEY;
 
         const boostrapCss = `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">`;
